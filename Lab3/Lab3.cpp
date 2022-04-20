@@ -12,9 +12,14 @@
 //Значения A, B, X вводятся с клавиатуры.
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-
+	ofstream myfile;
+	myfile.open("../files/f.txt");
+	myfile << "Writing to a file.";
+	myfile.close();
+	return 0;
 }
