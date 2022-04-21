@@ -34,18 +34,17 @@ int main() {
         }
         string line_2;
         file.close();
-        int* numbers = new int(count);
+        //int* numbers = new int(count);
         //int count_array = count;
-        file.open("../files/f.txt", ios::in);
+        //file.open("../files/f.txt", ios::in);
 
-        int k = 0;
-        while (getline(file, line_2)) {
-            num = stoi(line_2);
-            numbers[k] = i;
-            cout << i << endl;
-            k++;
-            i++;
-        }
+        //int k = 0;
+        //while (getline(file, line_2)) {
+        //    num = stoi(line_2);
+        //    numbers[k] = i;
+        //    cout << i << endl;
+        //    i++;
+        //}
         file.close(); //close the file object.
         ////for (int i = 0; i < count_array; i++) {
         ////    cout << numbers[i] << endl;
