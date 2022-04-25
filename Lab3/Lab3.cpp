@@ -15,6 +15,7 @@
 #include <fstream>
 #include <string>
 #include <stdlib.h>
+#include <sstream>
 
 using namespace std;
 int main() {
@@ -29,27 +30,32 @@ int main() {
     file.open("../files/f.txt", ios::in); //open a file to perform read operation using file object
     if (file.is_open()) {   //checking whether the file is open
         string line;
-        while (getline(file, line)) { //read data from file object and put it into string.
-            count++; //12
+        cout << "In your file are the next numbers:" << endl;
+        while (getline(file, line)) { 
+            //read data from file object and put it into string.
+            count++;
+            cout << line << endl;
         }
-        string line_2;
         file.close();
-        //int* numbers = new int(count);
-        //int count_array = count;
-        //file.open("../files/f.txt", ios::in);
 
-        //int k = 0;
-        //while (getline(file, line_2)) {
-        //    num = stoi(line_2);
-        //    numbers[k] = i;
-        //    cout << i << endl;
-        //    i++;
-        //}
+        cout << "Count of numbers is: " << count << endl;
+        
+        int* numbers = new int[count]; 
+        //dinamic array with integer numbers
+        file.open("../files/f.txt", ios::in);
+
+        string line_2;
+        int k = 0;
+        // type of the line from string to int
+        while (getline(file, line_2)) {
+            numbers[k] = stoi(line_2);
+            k++;
+        }
         file.close(); //close the file object.
-        ////for (int i = 0; i < count_array; i++) {
-        ////    cout << numbers[i] << endl;
-        ////}
-        //delete[] numbers;
+        for (int i = 0; i < count; i++) {
+            cout << numbers[i] << endl;
+        }
+        delete[] numbers;
     }
     /*newfile.open("../files/f.txt", ios::out); // open a file to perform write operation using file object
     if (newfile.is_open()) //checking whether the file is open
