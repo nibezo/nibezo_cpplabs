@@ -36,8 +36,9 @@ int main()
 	}
 
 	showArr(arr, arrSize);
+	//my_swap<double>(arr, arrSize);
 
-	cout << "Какое число необходимо искать? ";
+	cout << "Какое число необходимо искать?";
 	cin >> requiredKey; // ввод искомого числа
 
 	//поиск искомого числа и запись номера элемента
@@ -81,3 +82,14 @@ int linSearch(int arr[], int requiredKey, int arrSize)
 	}
 	return -1;
 }
+
+//template < typename T >
+//void my_swap(T& arr[], int requiredKey, int arrSize)
+//{
+//	for (int i = 0; i < arrSize; i++)
+//	{
+//		if (arr[i] == requiredKey)
+//			return i;
+//	}
+//	return -1;
+//}
